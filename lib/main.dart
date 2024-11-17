@@ -12,16 +12,9 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter App',
       theme: ThemeData(
-    useMaterial3: true,
-    textTheme: TextTheme(
-      displayLarge: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
-      bodyLarge: TextStyle(fontSize: 18, color: Colors.red),
-    ),
-    colorScheme: ColorScheme.fromSeed(
-      seedColor: Colors.red, 
-      brightness: Brightness.dark,
-    ),
-  ),
+        useMaterial3: true,
+        fontFamily: 'GowunDodum',
+      ),
       home: HomeScreen(),
     );
   }
@@ -39,91 +32,125 @@ class HomeScreen extends StatelessWidget {
     ];
 
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Color.fromARGB(255, 18, 18, 18),
       appBar: AppBar(
         title: Text(
-        'Home', 
-        style: TextStyle(
-        fontFamily: 'RockSalt',
-        fontWeight: FontWeight.bold,
-        color: Colors.white),
+          'Home',
+          style: TextStyle(
+              fontFamily: 'SedgwickAveDisplay',
+              // fontWeight: FontWeight.bold,
+              fontSize: 34,
+              color: Colors.white),
         ),
         backgroundColor: Colors.red,
       ),
       body: ListView(
         children: [
           SizedBox(
-            height: 400,
+            height:300,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               itemCount: images.length,
               itemBuilder: (context, index) {
                 return Center(
                     child: Padding(
-                  padding: const EdgeInsets.all(1.0),
+                  padding: const EdgeInsets.all(10.0),
                   child: Image.asset(
                     images[index],
-                    width: 600,
+                    width: 400,
                     height: 400,
                   ),
                 ));
               },
             ),
           ),
-          const SizedBox(height: 30),
-          const ListTile(
-            leading: Icon(
-            Icons.star,
-            color: Colors.red,),
-            title: Text(
-              'LIST WITH GOWUNDODUM FONT',
-              style: TextStyle(
-                fontFamily: 'GowunDodum',
-                fontWeight: FontWeight.bold,
-                color: Colors.red,
+          // SizedBox(height: 20),
+          Container(
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(10),
+            ),
+            padding: const EdgeInsets.all(8),
+            child: ListTile(
+              trailing:
+                  CircleAvatar(
+                    backgroundColor: Colors.red,
+                    child: Icon
+                    (Icons.add_moderator_rounded, 
+                    color: Colors.white)),
+              title: Text('GowunDodum Font',
+                  style: TextStyle(
+                      fontFamily: 'GowunDodum',
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                      color: Colors.red)),
+            ),
+          ),
+          SizedBox(height: 10),
+          Container(
+            decoration: BoxDecoration(
+              color: Colors.red,
+              borderRadius: BorderRadius.circular(10),
+            ),
+            padding: const EdgeInsets.all(8),
+            child: ListTile(
+              leading: Icon(Icons.person, color: Colors.white),
+              title: Text('GowunDodum Font',
+                  style: TextStyle(
+                      fontFamily: 'GowunDodum',
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                      color: Colors.white)),
+                      
+            ),
+          ),
+          SizedBox(height: 10),
+          Container(
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(10),
+            ),
+            padding: const EdgeInsets.all(8),
+            child: ListTile(
+              trailing:
+                  CircleAvatar(
+                    backgroundColor: Colors.red,
+                    child: Icon
+                    (Icons.settings, 
+                    color: Colors.white)),
+              title: Text('RockSalt Font',
+                  style: TextStyle(
+                      fontFamily: 'RockSalt',
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                      color: Colors.red)),
+            ),
+          ),
+          SizedBox(height: 10),
+          Container(
+            decoration: BoxDecoration(
+              color: Colors.red,
+              borderRadius: BorderRadius.circular(
+                  10), 
+            ),
+            padding: const EdgeInsets.all(8),
+            child: ListTile(
+              leading: Icon(
+                Icons.account_tree_rounded,
+                color: Colors.white,
+              ),
+              title: Text(
+                'Rock Salt Font',
+                style: TextStyle(
+                  fontFamily: 'RockSalt',
+                  color: Colors.white,
+                ),
               ),
             ),
           ),
-          const ListTile(
-            leading: CircleAvatar(child: Icon(Icons.person)),
-            title: Text(
-              'ListTile with Regular Font',
-              style: TextStyle(
-                fontFamily: 'GowunDodum',
-                fontWeight: FontWeight.bold,
-                color: Colors.red,
-              ),
-            ),
-          ),
-          const ListTile(
-            leading: Icon(
-            Icons.settings,
-            color: Colors.red,),
-            title: Text(
-              'ListTile with Regular Font',
-              style: TextStyle(
-                fontFamily: 'GowunDodum',
-                fontWeight: FontWeight.bold,
-                color: Colors.red,
-              ),
-            ),
-          ),
-          const ListTile(
-            trailing: Icon(
-            Icons.arrow_forward,
-            color: Colors.red,),
-            title: Text(
-              'ListTile with Regular Font',
-              style: TextStyle(
-                fontFamily: 'GowunDodum',
-                fontWeight: FontWeight.bold,
-                color: Colors.red,
-              ),
-            ),
-          ),
-          const SizedBox(height: 20),
+          // SizedBox(height: 5),
           SizedBox(
-            height: 300,
+            height: 250,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               itemCount: 3,
