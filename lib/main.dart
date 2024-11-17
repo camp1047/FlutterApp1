@@ -32,7 +32,7 @@ class HomeScreen extends StatelessWidget {
     ];
 
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 18, 18, 18),
+      backgroundColor: Color(0xFFFFFFFF),
       appBar: AppBar(
         title: Text(
           'Home',
@@ -42,11 +42,13 @@ class HomeScreen extends StatelessWidget {
               fontSize: 34,
               color: Colors.white),
         ),
-        backgroundColor: Colors.red,
+        backgroundColor: Color(0xFF49516F),
       ),
       body: ListView(
         children: [
           Container(
+            margin:
+                EdgeInsets.symmetric(horizontal: 2),
             padding: const EdgeInsets.all(10),
             child: Text(
               'Asset Gallery',
@@ -54,7 +56,7 @@ class HomeScreen extends StatelessWidget {
                 fontFamily: 'GowunDodum',
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
-                color: Colors.white,
+                color: Colors.black,
               ),
             ),
           ),
@@ -79,46 +81,33 @@ class HomeScreen extends StatelessWidget {
           ),
           // SizedBox(height: 20),
           Container(
+            margin:
+                EdgeInsets.symmetric(horizontal: 2),
             padding: const EdgeInsets.all(10),
             child: Text(
               'Custom ListTitles',
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
-                color: Colors.white,
+                color: Colors.black,
               ),
             ),
           ),
           SizedBox(height: 10),
           Container(
+            margin:
+                EdgeInsets.symmetric(horizontal: 10),
             decoration: BoxDecoration(
-              color: Colors.white,
+              color: Color(0xFF6279B8),
               borderRadius: BorderRadius.circular(10),
             ),
             padding: const EdgeInsets.all(8),
             child: ListTile(
               trailing: CircleAvatar(
-                  backgroundColor: Colors.red,
+                  backgroundColor: Colors.white,
                   child:
-                      Icon(Icons.add_moderator_rounded, color: Colors.white)),
-              title: Text('GowunDodum Font',
-                  style: TextStyle(
-                      fontFamily: 'GowunDodum',
-                      fontWeight: FontWeight.bold,
-                      fontSize: 22,
-                      color: Colors.red)),
-            ),
-          ),
-          SizedBox(height: 10),
-          Container(
-            decoration: BoxDecoration(
-              color: Colors.red,
-              borderRadius: BorderRadius.circular(10),
-            ),
-            padding: const EdgeInsets.all(8),
-            child: ListTile(
-              leading: Icon(Icons.person, color: Colors.white),
-              title: Text('GowunDodum Font',
+                      Icon(Icons.add_moderator_rounded, color: Colors.black)),
+              title: Text('GowunDodum Font Bold',
                   style: TextStyle(
                       fontFamily: 'GowunDodum',
                       fontWeight: FontWeight.bold,
@@ -128,37 +117,63 @@ class HomeScreen extends StatelessWidget {
           ),
           SizedBox(height: 10),
           Container(
+            margin:
+                EdgeInsets.symmetric(horizontal: 10),
             decoration: BoxDecoration(
-              color: Colors.white,
+              color: Color(0xFFF8EA4D2),
+              borderRadius: BorderRadius.circular(10),
+            ),
+            padding: const EdgeInsets.all(8),
+            child: ListTile(
+              leading: Icon(Icons.person, color: Colors.black),
+              title: Text(
+                'GowunDodum Font Regular',
+                style: TextStyle(
+                    fontFamily: 'GowunDodum',
+                    // fontWeight: FontWeight.bold,
+                    fontSize: 22,
+                    color: Colors.black),
+              ),
+            ),
+          ),
+
+          SizedBox(height: 10),
+          Container(
+            margin:
+                EdgeInsets.symmetric(horizontal: 10),
+            decoration: BoxDecoration(
+              color: Color(0xFF6279B8),
               borderRadius: BorderRadius.circular(10),
             ),
             padding: const EdgeInsets.all(8),
             child: ListTile(
               trailing: CircleAvatar(
-                  backgroundColor: Colors.red,
-                  child: Icon(Icons.settings, color: Colors.white)),
-              title: Text('RockSalt Font',
+                  backgroundColor: Colors.white,
+                  child: Icon(Icons.settings, color: Colors.black)),
+              title: Text('RockSalt Font Bold',
                   style: TextStyle(
                       fontFamily: 'RockSalt',
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
-                      color: Colors.red)),
+                      color: Colors.white)),
             ),
           ),
           SizedBox(height: 10),
           Container(
+            margin:
+                EdgeInsets.symmetric(horizontal: 10),
             decoration: BoxDecoration(
-              color: Colors.red,
+              color: Color(0xFFF8EA4D2),
               borderRadius: BorderRadius.circular(10),
             ),
             padding: const EdgeInsets.all(8),
             child: ListTile(
               leading: Icon(
                 Icons.account_tree_rounded,
-                color: Colors.white,
+                color: Colors.black,
               ),
               title: Text(
-                'Rock Salt Font',
+                'Rock Salt Font Regular',
                 style: TextStyle(
                   fontFamily: 'RockSalt',
                   fontSize: 20,
@@ -169,13 +184,15 @@ class HomeScreen extends StatelessWidget {
           ),
           SizedBox(height: 10),
           Container(
+            margin:
+                EdgeInsets.symmetric(horizontal: 2),
             padding: const EdgeInsets.all(10),
             child: Text(
               'Network Url Gallery',
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
-                color: Colors.white,
+                color: Colors.black,
               ),
             ),
           ),
