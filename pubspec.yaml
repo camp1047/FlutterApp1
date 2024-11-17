@@ -1,0 +1,33 @@
+name: flutter_app_1
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=3.4.3 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/AI_Girl1.png
+    - assets/images/AI_Girl2.png
+    - assets/images/AI_Girl3.png
+  fonts:
+    - family: RockSalt
+      fonts:
+        - asset: assets/fonts/RockSalt-Regular.ttf
+    - family: SedgwickAveDisplay
+      fonts:
+        - asset: assets/fonts/SedgwickAveDisplay-Regular.ttf
+    - family: GowunDodum
+      fonts:
+        - asset: assets/fonts/GowunDodum-Regular.ttf
