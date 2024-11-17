@@ -46,8 +46,21 @@ class HomeScreen extends StatelessWidget {
       ),
       body: ListView(
         children: [
+          Container(
+            padding: const EdgeInsets.all(10),
+            child: Text(
+              'Asset Gallery',
+              style: TextStyle(
+                fontFamily: 'GowunDodum',
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+          ),
+          // SizedBox(height: 5),
           SizedBox(
-            height:300,
+            height: 300,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               itemCount: images.length,
@@ -66,23 +79,33 @@ class HomeScreen extends StatelessWidget {
           ),
           // SizedBox(height: 20),
           Container(
+            padding: const EdgeInsets.all(10),
+            child: Text(
+              'Custom ListTitles',
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+          ),
+          SizedBox(height: 10),
+          Container(
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(10),
             ),
             padding: const EdgeInsets.all(8),
             child: ListTile(
-              trailing:
-                  CircleAvatar(
-                    backgroundColor: Colors.red,
-                    child: Icon
-                    (Icons.add_moderator_rounded, 
-                    color: Colors.white)),
+              trailing: CircleAvatar(
+                  backgroundColor: Colors.red,
+                  child:
+                      Icon(Icons.add_moderator_rounded, color: Colors.white)),
               title: Text('GowunDodum Font',
                   style: TextStyle(
                       fontFamily: 'GowunDodum',
                       fontWeight: FontWeight.bold,
-                      fontSize: 20,
+                      fontSize: 22,
                       color: Colors.red)),
             ),
           ),
@@ -99,9 +122,8 @@ class HomeScreen extends StatelessWidget {
                   style: TextStyle(
                       fontFamily: 'GowunDodum',
                       fontWeight: FontWeight.bold,
-                      fontSize: 20,
+                      fontSize: 22,
                       color: Colors.white)),
-                      
             ),
           ),
           SizedBox(height: 10),
@@ -112,12 +134,9 @@ class HomeScreen extends StatelessWidget {
             ),
             padding: const EdgeInsets.all(8),
             child: ListTile(
-              trailing:
-                  CircleAvatar(
-                    backgroundColor: Colors.red,
-                    child: Icon
-                    (Icons.settings, 
-                    color: Colors.white)),
+              trailing: CircleAvatar(
+                  backgroundColor: Colors.red,
+                  child: Icon(Icons.settings, color: Colors.white)),
               title: Text('RockSalt Font',
                   style: TextStyle(
                       fontFamily: 'RockSalt',
@@ -130,8 +149,7 @@ class HomeScreen extends StatelessWidget {
           Container(
             decoration: BoxDecoration(
               color: Colors.red,
-              borderRadius: BorderRadius.circular(
-                  10), 
+              borderRadius: BorderRadius.circular(10),
             ),
             padding: const EdgeInsets.all(8),
             child: ListTile(
@@ -143,12 +161,24 @@ class HomeScreen extends StatelessWidget {
                 'Rock Salt Font',
                 style: TextStyle(
                   fontFamily: 'RockSalt',
+                  fontSize: 20,
                   color: Colors.white,
                 ),
               ),
             ),
           ),
-          // SizedBox(height: 5),
+          SizedBox(height: 10),
+          Container(
+            padding: const EdgeInsets.all(10),
+            child: Text(
+              'Network Url Gallery',
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+          ),
           SizedBox(
             height: 250,
             child: ListView.builder(
